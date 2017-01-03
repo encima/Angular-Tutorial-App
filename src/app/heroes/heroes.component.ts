@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -9,7 +9,7 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heroes.component.css'],
   providers: [HeroService]
 })
-export class HeroesComponent {
+export class HeroesComponent implements OnInit {
 	title = 'Tour of Heroes';
 	selectedHero: Hero;
 	heroes: Hero[];

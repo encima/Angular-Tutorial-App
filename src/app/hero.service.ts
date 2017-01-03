@@ -14,6 +14,9 @@ export class HeroService {
 
   constructor(private http: Http) { }
 
+/**
+ * conversion of retrieval to a promise
+ */
   getHeroes(): Promise<Hero[]> {
     return this.http.get(this.heroesUrl)
                .toPromise()
